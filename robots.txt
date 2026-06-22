@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rubenreysouto3d.github.io/rrscv/sitemap.xml
