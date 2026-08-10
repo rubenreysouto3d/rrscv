@@ -70,6 +70,14 @@
   }
   </script>
   <style>
+@font-face {
+  font-family: "RRS Title";
+  src: url("./assets/fonts/Arial-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  font-display: swap;
+}
 @page { size: A4 portrait; margin: 0; }
 * { box-sizing: border-box; }
 html, body { margin: 0; min-height: 100%; }
@@ -89,7 +97,7 @@ body {
   --magenta: #ff2aaa;
   --line: rgba(7,8,13,.20);
   --mono: "PT Mono", "DejaVu Sans Mono", Consolas, "Courier New", monospace;
-  --cond: "Noto Sans Display", "PT Sans Narrow", "Liberation Sans Narrow", "Nimbus Sans Narrow", "Arial Narrow", Arial, sans-serif;
+  --cond: "RRS Title", "Noto Sans Display", "PT Sans Narrow", "Liberation Sans Narrow", "Nimbus Sans Narrow", "Arial Narrow", Arial, sans-serif;
   --content-left: 41mm;
 }
 .page {
@@ -127,7 +135,7 @@ a { color: inherit; text-decoration: none; }
 .hero { position: absolute; left: var(--content-left); top: 9mm; width: 160mm; z-index: 2; }
 .strap { position: relative; top: -.65mm; display: inline-block; background: var(--blue); color: #fff; padding: 1.28mm 2.7mm 1.08mm; font: 900 6.95pt/1 var(--mono); letter-spacing: .105em; text-transform: uppercase; white-space: nowrap; }
 h1 { margin: 4.55mm 0 2.15mm; font-family: var(--cond); font-size: 53.2pt; font-weight: 900; font-stretch: extra-condensed; line-height: .718; letter-spacing: -.035em; text-transform: uppercase; transform: scaleX(.94); transform-origin: left top; }
-h1 span { display: block; }
+h1 span { display: block; white-space: nowrap; }
 h1 span:first-child { padding-top: .32mm; }
 .role { display: inline-block; background: var(--lime); padding: 1.28mm 2.55mm 1.12mm; font: 900 8.15pt/1 var(--mono); letter-spacing: .015em; text-transform: uppercase; white-space: nowrap; }
 .hero-code { position: absolute; left: 98mm; top: 15.6mm; width: 62mm; text-align: right; font: 900 4.85pt/1 var(--mono); letter-spacing: .115em; color: var(--magenta); text-transform: uppercase; white-space: nowrap; opacity: .9; }
@@ -927,6 +935,10 @@ h1 {
 
   h1 {
     font-size: 46px;
+  }
+
+  h1 span {
+    white-space: normal;
   }
 
   .job-large {
