@@ -1,0 +1,42 @@
+/* Desktop composition within the established visual system. */
+@media screen and (min-width: 861px) {
+  .page {
+    width: min(100%, 1120px);
+    padding: 0 32px 34px;
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    column-gap: 36px;
+  }
+  .rail { width: calc(100% + 64px); margin: 0 -32px 30px; }
+  .stripe-code { position: absolute; right: 32px; top: 72px; width: 180px; }
+  .blue-block { position: absolute; right: 32px; top: 90px; width: 180px; margin: 0; }
+  .hero {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+    column-gap: 36px;
+    row-gap: 14px;
+  }
+  .strap { grid-column: 1; grid-row: 1; justify-self: start; }
+  h1 { grid-column: 1; grid-row: 2; margin: 4px 0 6px; font-size: clamp(60px, 7vw, 88px); }
+  .role { grid-column: 1; grid-row: 3; justify-self: start; align-self: center; font-size: 10px; }
+  .hero-code { display: none; }
+  .intro, .showcase .intro {
+    grid-column: 2; grid-row: 2; align-self: center;
+    width: 100%; max-width: none; margin: 0;
+    font-size: 16px; line-height: 1.5;
+  }
+  .quick-links { grid-column: 2; grid-row: 3; margin: 0; align-self: center; gap: 8px; }
+  .recent, .earlier { margin-top: 30px; }
+  .job-large { grid-template-columns: 84px minmax(0, 1fr); column-gap: 18px; }
+  .recent .job p { font-size: 14px; line-height: 1.45; }
+  .recent .job b { font-size: 14px; }
+  .support { grid-template-columns: minmax(0, .9fr) minmax(0, 1.3fr) minmax(0, .8fr); }
+}
+@media screen and (min-width: 861px) and (max-width: 1020px) {
+  .page { padding-left: 24px; padding-right: 24px; column-gap: 28px; }
+  .rail { width: calc(100% + 48px); margin-left: -24px; margin-right: -24px; }
+  .hero { column-gap: 28px; }
+  .blue-block, .stripe-code { right: 24px; }
+  .intro, .showcase .intro { font-size: 14px; }
+  .quick-links { flex-wrap: wrap; gap: 6px; }
+  .job-large { grid-template-columns: 1fr; }
+}
